@@ -13,7 +13,14 @@ protocol AnimatedButtonsProtocol {
     func buttonSelectedAtIndex(index:Int)
 }
 
+
+@IBDesignable
 class AnimatedView: UIView {
+    
+    
+    @IBInspectable var animationDuration:Double = 0.3
+    
+    
     
     @IBOutlet weak var backgroundOverlay: UIView!
     var backgroundOverlayFrame:CGRect!
@@ -114,7 +121,7 @@ class AnimatedView: UIView {
         
         if shuffleBtn.center == shuffleBtnCenter {
             
-            UIView.animate(withDuration:0.3, animations: {
+            UIView.animate(withDuration:animationDuration, animations: {
                 
                 self.playListBtn.alpha = 0.0
                 self.shuffleBtn.alpha = 0.0
@@ -125,7 +132,7 @@ class AnimatedView: UIView {
                 self.shuffleBtn.center = self.playBtn.center
                 self.repeatBtn.center = self.playBtn.center
                 
-           //   self.updateBackgroundAgain()
+    
                 
             })
             
@@ -135,7 +142,7 @@ class AnimatedView: UIView {
             
         }else{
             
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: animationDuration, animations: {
                 self.playListBtn.alpha = 1.0
                 self.shuffleBtn.alpha = 1.0
                 self.repeatBtn.alpha = 1.0
@@ -146,7 +153,7 @@ class AnimatedView: UIView {
                 self.repeatBtn.center = self.repeatBtnCenter
                 self.playListBtn.center = self.playListBtnCenter
                 self.shuffleBtn.center = self.shuffleBtnCenter
-          //  self.updateBackground()
+   
             })
             
             
