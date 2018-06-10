@@ -60,10 +60,9 @@
 		80F5649720CD3A200077BAE7 /* AnimatedButtonSelection */ = {
 			isa = PBXGroup;
 			children = (
+				80F564B420CD75E60077BAE7 /* AnimatedView */,
 				80F5649820CD3A200077BAE7 /* AppDelegate.swift */,
 				80F5649A20CD3A200077BAE7 /* ViewController.swift */,
-				80F564AA20CD3A920077BAE7 /* AnimatedView.swift */,
-				80F564AE20CD3B630077BAE7 /* AnimatedView.xib */,
 				80F564B020CD3BC20077BAE7 /* RoundButton.swift */,
 				80F5649C20CD3A200077BAE7 /* Main.storyboard */,
 				80F5649F20CD3A200077BAE7 /* Assets.xcassets */,
@@ -71,6 +70,15 @@
 				80F564A420CD3A200077BAE7 /* Info.plist */,
 			);
 			path = AnimatedButtonSelection;
+			sourceTree = "<group>";
+		};
+		80F564B420CD75E60077BAE7 /* AnimatedView */ = {
+			isa = PBXGroup;
+			children = (
+				80F564AA20CD3A920077BAE7 /* AnimatedView.swift */,
+				80F564AE20CD3B630077BAE7 /* AnimatedView.xib */,
+			);
+			path = AnimatedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

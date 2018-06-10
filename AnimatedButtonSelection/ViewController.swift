@@ -8,18 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,AnimatedButtonsProtocol {
+    
+ 
+    
 
+    @IBOutlet weak var buttonView: AnimatedView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+      buttonView.animatedDelegate = self
+   
+
     }
+    
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    func buttonSelectedAtIndex(index:Int){
+        
+        print("button selected at index \(index)")
+        
+    }
 }
-
