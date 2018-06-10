@@ -8,11 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,AnimatedButtonsProtocol {
+    
+ 
+    
 
+    @IBOutlet weak var buttonView: AnimatedView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+      buttonView.animatedDelegate = self
+   
+
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+      
+
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +36,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func playBtnTapped(){
+      
 }
-
+}
