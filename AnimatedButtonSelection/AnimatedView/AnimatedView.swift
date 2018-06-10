@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol AnimatedButtonsProtocol {
-    func playBtnTapped()
+    func buttonSelectedAtIndex(index:Int)
 }
 
 class AnimatedView: UIView {
@@ -108,6 +108,10 @@ class AnimatedView: UIView {
     
    
     @IBAction func playBtnTapped(_ sender: RoundButton) {
+        
+        animatedDelegate?.buttonSelectedAtIndex(index:sender.tag)
+        
+        
         if shuffleBtn.center == shuffleBtnCenter {
             
             UIView.animate(withDuration:0.3, animations: {
@@ -121,7 +125,7 @@ class AnimatedView: UIView {
                 self.shuffleBtn.center = self.playBtn.center
                 self.repeatBtn.center = self.playBtn.center
                 
-              self.updateBackgroundAgain()
+           //   self.updateBackgroundAgain()
                 
             })
             
@@ -136,11 +140,13 @@ class AnimatedView: UIView {
                 self.shuffleBtn.alpha = 1.0
                 self.repeatBtn.alpha = 1.0
                 
+      
+                
                 
                 self.repeatBtn.center = self.repeatBtnCenter
                 self.playListBtn.center = self.playListBtnCenter
                 self.shuffleBtn.center = self.shuffleBtnCenter
-            self.updateBackground()
+          //  self.updateBackground()
             })
             
             

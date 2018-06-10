@@ -23,20 +23,16 @@ class ViewController: UIViewController,AnimatedButtonsProtocol {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-      
 
-        
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    func playBtnTapped(){
-      
-}
+    func buttonSelectedAtIndex(index:Int){
+        
+        print("button selected at index \(index)")
+        
+    }
 }
